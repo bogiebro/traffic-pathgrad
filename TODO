@@ -1,0 +1,30 @@
+- Divide road into cells
+- Input: 1 if a car is in the cell, 0 if not. 
+- Also can have velocity vector. Velocity if a car is there, if not, 0.
+- Other paper had penalty as the additional time cars waited since the the last tick.
+
+NOW:
+  - Let's give it how far away the nearest platoon is
+  - Also how large the nearest platoon is
+  - Also sum of waiting times of nearest platoon
+
+
+NOW:
+  - Let's give it data on every single car location and velocity. No history.
+  - Or mybe use total waiting time over all cars in the queue
+  - Maybe add a minimum waiting time
+  - Maybe add queue length of stopped cars
+  - Maybe use larger grid (10x10)
+  - Add a bool var of when a car is approaching from less than omega meters
+  - Length of incoming platoon (where platoons are separated by some distance m)
+  - Let's have intersecting one-ways
+  - Let's have the reward be negative the sum of the waiting times. 
+
+
+- Could do an rnn of each car in the system. But let's do simpler stuff first
+
+- Visualization should be a mode for everyone
+- True reward only can be gathered at the end of a simulation. But we can print accumulated
+speeds
+- Maybe add loop detectors at front and back?
+- We need to see if it learns a dynamic policy if we change the rate while training
